@@ -1,0 +1,4 @@
+rootProject.name = 'dropwizard-guicey-examples'
+
+include 'autoconfig-base',
+        'manualconfig-base'
