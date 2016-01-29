@@ -3,4 +3,5 @@ rootProject.name = 'dropwizard-guicey-examples'
 include 'autoconfig-base',
         'manualconfig-base',
         'autoconfig-installer',
-        'manualconfig-installer'
+        'manualconfig-installer',
+        'bundle-base'

@@ -5,22 +5,20 @@ import io.dropwizard.Configuration;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import ru.vyarus.dropwizard.guice.GuiceBundle;
-import ru.vyarus.dropwizard.guice.examples.installer.CustomInstaller;
-import ru.vyarus.dropwizard.guice.examples.service.MarkedService;
+import ru.vyarus.dropwizard.guice.examples.bundle.SomeBundle;
 
 /**
- * Sample application for custom installer in manual config mode.
+ * Guicey bundle usage sample.
  *
  * @author Vyacheslav Rusakov
  * @since 29.01.2016
  */
-public class ManualconfigInstallerApplication extends Application<Configuration> {
+public class BundleBaseApplication extends Application<Configuration> {
 
     @Override
     public void initialize(Bootstrap<Configuration> bootstrap) {
         bootstrap.addBundle(GuiceBundle.builder()
-                .installers(CustomInstaller.class)
-                .extensions(MarkedService.class)
+                .bundles(new SomeBundle())
                 .build());
     }
 

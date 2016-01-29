@@ -13,14 +13,19 @@ All samples build with guicey 3.2.0 (dropwizard 0.9).
 
 ### Example applications
 
-* [Autoconfig-base](https://github.com/xvik/dropwizard-guicey-examples/tree/master/autoconfig-base) 
-sample application configured using classpath scan (auto config mode)
-* [Manualconfig-base](https://github.com/xvik/dropwizard-guicey-examples/tree/master/manualconfig-base) 
-sample application configured manually (without classpath scan)
+* [Autoconfig](https://github.com/xvik/dropwizard-guicey-examples/tree/master/autoconfig-base) 
+application configured using classpath scan (auto config mode)
+* [Manual config](https://github.com/xvik/dropwizard-guicey-examples/tree/master/manualconfig-base) 
+application configured manually (without classpath scan)
 
 ### Installers
 
-* [Autoconfig-installer](https://github.com/xvik/dropwizard-guicey-examples/tree/master/autoconfig-installer) 
-sample application with custom installer (auto config mode)
-* [Manualconfig-installer](https://github.com/xvik/dropwizard-guicey-examples/tree/master/manualconfig-installer) 
-sample application with custom installer configured manually (without classpath scan)
+* [Auto registered installer](https://github.com/xvik/dropwizard-guicey-examples/tree/master/autoconfig-installer) 
+application with custom installer (auto config mode)
+* [Manually registered installer](https://github.com/xvik/dropwizard-guicey-examples/tree/master/manualconfig-installer) 
+application with custom installer configured manually (without classpath scan)
+
+### Guicey bundles
+
+* [Guicey bundle definition](https://github.com/xvik/dropwizard-guicey-examples/tree/master/bundle-base) 
+application with sample guicey bundle
