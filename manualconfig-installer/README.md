@@ -1,4 +1,4 @@
-### Custom installer usage in auto config mode
+### Custom installer usage in manual config mode
 
 In manual mode both [installer](https://github.com/xvik/dropwizard-guicey#installers) 
 and extension (which must be registered by installer) must be registered manually.
