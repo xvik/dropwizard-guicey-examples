@@ -17,3 +17,10 @@ All samples build with guicey 3.2.0 (dropwizard 0.9).
 sample application configured using classpath scan (auto config mode)
 * [Manualconfig-base](https://github.com/xvik/dropwizard-guicey-examples/tree/master/manualconfig-base) 
 sample application configured manually (without classpath scan)
+
+### Installers
+
+* [Autoconfig-installer](https://github.com/xvik/dropwizard-guicey-examples/tree/master/autoconfig-installer) 
+sample application with custom installer (auto config mode)
+* [Manualconfig-installer](https://github.com/xvik/dropwizard-guicey-examples/tree/master/manualconfig-installer) 
+sample application with custom installer configured manually (without classpath scan)
