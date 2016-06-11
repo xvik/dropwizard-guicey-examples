@@ -29,3 +29,7 @@ application with custom installer configured manually (without classpath scan)
 
 * [Guicey bundle definition](https://github.com/xvik/dropwizard-guicey-examples/tree/master/bundle-base) 
 application with sample guicey bundle
+
+### Dropwizard modules
+
+* [hibernate](https://github.com/xvik/dropwizard-guicey-examples/tree/master/hibernate) application with dropwizard-hibernate module integration

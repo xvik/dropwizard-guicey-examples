@@ -4,4 +4,5 @@ include 'autoconfig-base',
         'manualconfig-base',
         'autoconfig-installer',
         'manualconfig-installer',
-        'bundle-base'
+        'bundle-base',
+        'hibernate'

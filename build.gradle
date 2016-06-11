@@ -8,6 +8,10 @@ wrapper {
 
 description = 'Dropwizard guicey examples'
 
+ext {
+    dropwizard = '0.9.2'
+}
+
 allprojects {
     apply plugin: 'groovy'
 
@@ -18,7 +22,7 @@ allprojects {
         compile 'ru.vyarus:dropwizard-guicey:3.2.0'
 
         testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
-        testCompile 'io.dropwizard:dropwizard-testing:0.9.2'
+        testCompile "io.dropwizard:dropwizard-testing:$dropwizard"
     }
 
     test {
