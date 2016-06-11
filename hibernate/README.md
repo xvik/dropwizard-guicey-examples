@@ -56,7 +56,7 @@
      }
  ```
 
-Overall it's a complete example with [one entity](https://github.com/xvik/dropwizard-guicey-examples/main/java/hibernate/src/test/groovy/ru/vyarus/dropwizard/guice/examples/model/Sample.java)
+Overall it's a complete example with [one entity](https://github.com/xvik/dropwizard-guicey-examples/main/java/hibernate/src/main/java/ru/vyarus/dropwizard/guice/examples/model/Sample.java)
 and [simple resource](https://github.com/xvik/dropwizard-guicey-examples/tree/master/hibernate/src/main/java/ru/vyarus/dropwizard/guice/examples/rest/SampleResource.java).
 
 [Test](https://github.com/xvik/dropwizard-guicey-examples/tree/master/hibernate/src/test/groovy/ru/vyarus/dropwizard/guice/examples/HbnResourceTest.groovy) starts application
