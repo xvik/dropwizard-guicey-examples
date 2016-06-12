@@ -31,12 +31,7 @@
  
      @Override
      protected void configure() {
-         bind(SessionFactory.class).toProvider(new Provider<SessionFactory>() {
-             @Override
-             public SessionFactory get() {
-                 return hbnBundle.getSessionFactory();
-             }
-         });
+         bind(SessionFactory.class).toInstance(hbnBundle.getSessionFactory());
      }
  }
  ```
