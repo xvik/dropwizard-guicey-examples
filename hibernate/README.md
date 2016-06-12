@@ -1,7 +1,7 @@
 ### Hibernate integration sample
 
 [dropwiard-hibernate](http://www.dropwizard.io/0.9.2/docs/manual/hibernate.html) is configured exactly as
- it's described in docs, but extracted to [separate class](https://github.com/xvik/dropwizard-guicey-examples/tree/master/hibernate/src/main/java/ru/vyarus/dropwizard/guice/examples/hbn/HbnBundle.java) for simplicity:
+ it's described in docs, but extracted to [separate class](src/main/java/ru/vyarus/dropwizard/guice/examples/hbn/HbnBundle.java) for simplicity:
  
  ```java
  public class HbnBundle extends HibernateBundle<HbnAppConfiguration> {
@@ -17,7 +17,7 @@
  }
  ```
  
- [Guice module](https://github.com/xvik/dropwizard-guicey-examples/tree/master/hibernate/src/main/java/ru/vyarus/dropwizard/guice/examples/hbn/HbnModule.java) 
+ [Guice module](src/main/java/ru/vyarus/dropwizard/guice/examples/hbn/HbnModule.java) 
  used to provide SessionFactory instance into guice context:
  
  ```java
@@ -41,7 +41,7 @@
  }
  ```
  
- And in [application](https://github.com/xvik/dropwizard-guicey-examples/tree/master/hibernate/src/main/java/ru/vyarus/dropwizard/guice/examples/HbnApplication.java) init:
+ And in [application](src/main/java/ru/vyarus/dropwizard/guice/examples/HbnApplication.java) init:
  
  ```java
  @Override
@@ -56,8 +56,8 @@
      }
  ```
 
-Overall it's a complete example with [one entity](https://github.com/xvik/dropwizard-guicey-examples/main/java/hibernate/src/main/java/ru/vyarus/dropwizard/guice/examples/model/Sample.java)
-and [simple resource](https://github.com/xvik/dropwizard-guicey-examples/tree/master/hibernate/src/main/java/ru/vyarus/dropwizard/guice/examples/rest/SampleResource.java).
+Overall it's a complete example with [one entity](src/main/java/ru/vyarus/dropwizard/guice/examples/model/Sample.java)
+and [simple resource](src/main/java/ru/vyarus/dropwizard/guice/examples/rest/SampleResource.java).
 
-[Test](https://github.com/xvik/dropwizard-guicey-examples/tree/master/hibernate/src/test/groovy/ru/vyarus/dropwizard/guice/examples/HbnResourceTest.groovy) starts application
-with in-memory h2 db ([see config](https://github.com/xvik/dropwizard-guicey-examples/tree/master/hibernate/src/test/resources/config.yml)).
+[Test](src/test/groovy/ru/vyarus/dropwizard/guice/examples/HbnResourceTest.groovy) starts application
+with in-memory h2 db ([see config](src/test/resources/config.yml)).

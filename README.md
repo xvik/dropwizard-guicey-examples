@@ -13,23 +13,23 @@ All samples build with guicey 3.2.0 (dropwizard 0.9).
 
 ### Example applications
 
-* [Autoconfig](https://github.com/xvik/dropwizard-guicey-examples/tree/master/autoconfig-base) 
+* [Autoconfig](autoconfig-base) 
 application configured using classpath scan (auto config mode)
-* [Manual config](https://github.com/xvik/dropwizard-guicey-examples/tree/master/manualconfig-base) 
+* [Manual config](manualconfig-base) 
 application configured manually (without classpath scan)
 
 ### Installers
 
-* [Auto registered installer](https://github.com/xvik/dropwizard-guicey-examples/tree/master/autoconfig-installer) 
+* [Auto registered installer](autoconfig-installer) 
 application with custom installer (auto config mode)
-* [Manually registered installer](https://github.com/xvik/dropwizard-guicey-examples/tree/master/manualconfig-installer) 
+* [Manually registered installer](manualconfig-installer) 
 application with custom installer configured manually (without classpath scan)
 
 ### Guicey bundles
 
-* [Guicey bundle definition](https://github.com/xvik/dropwizard-guicey-examples/tree/master/bundle-base) 
+* [Guicey bundle definition](bundle-base) 
 application with sample guicey bundle
 
 ### Dropwizard modules
 
-* [hibernate](https://github.com/xvik/dropwizard-guicey-examples/tree/master/hibernate) application with dropwizard-hibernate module integration
+* [hibernate](hibernate) application with dropwizard-hibernate module integration

@@ -12,5 +12,5 @@ bootstrap.addBundle(GuiceBundle.builder()
                 .bundles(new SomeBundle())
 ```
 
-Sample is based on [manual installer configuration sample](https://github.com/xvik/dropwizard-guicey-examples/tree/master/manualconfig-installer)
+Sample is based on [manual installer configuration sample](../manualconfig-installer)
 where extensions were used directly.
