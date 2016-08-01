@@ -4,7 +4,7 @@ import com.google.inject.Injector
 import com.google.inject.Key
 import ru.vyarus.dropwizard.guice.examples.bundle.installer.CustomInstaller
 import ru.vyarus.dropwizard.guice.examples.bundle.service.MarkedService
-import ru.vyarus.dropwizard.guice.module.installer.internal.FeaturesHolder
+import ru.vyarus.dropwizard.guice.module.GuiceyConfigurationInfo
 import ru.vyarus.dropwizard.guice.test.spock.UseGuiceyApp
 import spock.lang.Specification
 
@@ -18,14 +18,14 @@ import javax.inject.Inject
 class AppTest extends Specification {
 
     @Inject
-    FeaturesHolder holder
+    GuiceyConfigurationInfo info
     @Inject
     Injector injector
 
     def "Check feature installation"() {
 
         expect: "installer and feature registered"
-        holder.installers.find { return it instanceof CustomInstaller } != null
+        info.installers.contains(CustomInstaller)
         injector.getExistingBinding(Key.get(MarkedService)) != null
 
     }
