@@ -8,4 +8,4 @@ GuiceBundle.builder().enableAutoConfig("ru.vyarus.dropwizard.guice.examples")
 extensions. So `SampleResource` will be found and registered automatically.
 
 Also see sample spock tests using both [GuiceyAppRule](https://github.com/xvik/dropwizard-guicey#testing) (start only guice context - very fast) and 
-[DropwizardAppRule](http://www.dropwizard.io/0.9.2/docs/manual/testing.html) (when http server started).
+[DropwizardAppRule](http://www.dropwizard.io/1.0.0/docs/manual/testing.html) (when http server started).

@@ -9,7 +9,9 @@ Usage examples for [dropwizard-guicey](https://github.com/xvik/dropwizard-guicey
 If you can't find answer for your problem in provided examples, please request new sample by 
 [creating new issue](https://github.com/xvik/dropwizard-guicey-examples/issues).
 
-All samples build with guicey 3.3.0 (dropwizard 0.9.3).
+All samples build with guicey 4.0.0 (dropwizard 1.0.0).
+
+[Dropwizard 0.9 examples](https://github.com/xvik/dropwizard-guicey-examples/tree/dw-0.9)
 
 ### Example applications
 

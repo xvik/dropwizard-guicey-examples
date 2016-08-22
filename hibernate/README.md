@@ -1,6 +1,6 @@
 ### Hibernate integration sample
 
-[dropwiard-hibernate](http://www.dropwizard.io/0.9.2/docs/manual/hibernate.html) is configured exactly as
+[dropwiard-hibernate](http://www.dropwizard.io/1.0.0/docs/manual/hibernate.html) is configured exactly as
  it's described in docs, but extracted to [separate class](src/main/java/ru/vyarus/dropwizard/guice/examples/hbn/HbnBundle.java) for simplicity:
  
  ```java
