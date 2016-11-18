@@ -9,7 +9,7 @@ wrapper {
 description = 'Dropwizard guicey examples'
 
 ext {
-    dropwizard = '1.0.0'
+    dropwizard = '1.0.5'
 }
 
 allprojects {
@@ -19,7 +19,7 @@ allprojects {
 
     repositories { jcenter(); mavenCentral(); mavenLocal() }
     dependencies {
-        compile 'ru.vyarus:dropwizard-guicey:4.0.0'
+        compile 'ru.vyarus:dropwizard-guicey:4.0.1'
 
         testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
         testCompile "io.dropwizard:dropwizard-testing:$dropwizard"
