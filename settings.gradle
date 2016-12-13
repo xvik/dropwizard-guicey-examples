@@ -5,4 +5,5 @@ include 'autoconfig-base',
         'autoconfig-installer',
         'manualconfig-installer',
         'bundle-base',
-        'hibernate'
+        'hibernate',
+        'jdbi'

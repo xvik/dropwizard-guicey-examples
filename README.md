@@ -5,11 +5,13 @@
 ### About
 
 Usage examples for [dropwizard-guicey](https://github.com/xvik/dropwizard-guicey)
+(and [extensions](https://github.com/xvik/dropwizard-guicey-ext))
 
 If you can't find answer for your problem in provided examples, please request new sample by 
 [creating new issue](https://github.com/xvik/dropwizard-guicey-examples/issues).
 
-All samples build with guicey 4.0.0 (dropwizard 1.0.0).
+All samples build with guicey 4.0.1 (dropwizard 1.0.5). [Extensions project BOM](https://github.com/xvik/dropwizard-guicey-ext/tree/master/guicey-bom) 
+used for guicey, guice and dropwizard dependencies management.
 
 [Dropwizard 0.9 examples](https://github.com/xvik/dropwizard-guicey-examples/tree/dw-0.9)
 
@@ -34,4 +36,5 @@ application with sample guicey bundle
 
 ### Dropwizard modules
 
+* [JDBI](jdbi) application with guicey JDBI integration (based on dropwizard-jdbi module)
 * [hibernate](hibernate) application with dropwizard-hibernate module integration

@@ -1,5 +1,6 @@
 plugins {
     id 'com.github.ben-manes.versions' version '0.12.0'
+    id "io.spring.dependency-management" version "0.6.1.RELEASE"
 }
 
 wrapper {
@@ -9,20 +10,30 @@ wrapper {
 description = 'Dropwizard guicey examples'
 
 ext {
-    dropwizard = '1.0.5'
+    guiceyBom = '0.2.1'
 }
 
-allprojects {
+subprojects {
     apply plugin: 'groovy'
+    apply plugin: 'io.spring.dependency-management'
 
     sourceCompatibility = 1.8
 
     repositories { jcenter(); mavenCentral(); mavenLocal() }
+    dependencyManagement {
+        imports {
+            mavenBom "ru.vyarus.guicey:guicey-bom:$guiceyBom"
+        }
+        dependencies {
+            dependency 'io.dropwizard.modules:dropwizard-flyway:1.0.0-1'
+            dependency 'com.h2database:h2:1.4.193'
+        }
+    }
     dependencies {
-        compile 'ru.vyarus:dropwizard-guicey:4.0.1'
+        compile 'ru.vyarus:dropwizard-guicey'
 
         testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
-        testCompile "io.dropwizard:dropwizard-testing:$dropwizard"
+        testCompile "io.dropwizard:dropwizard-testing"
     }
 
     test {
