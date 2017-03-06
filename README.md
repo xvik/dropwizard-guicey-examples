@@ -17,6 +17,7 @@ used for guicey, guice and dropwizard dependencies management.
 
 ### Example applications
 
+* [Getting started](getting-started) - example application from getting started documentation chapter.
 * [Autoconfig](autoconfig-base) 
 application configured using classpath scan (auto config mode)
 * [Manual config](manualconfig-base) 
