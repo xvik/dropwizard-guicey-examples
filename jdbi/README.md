@@ -29,7 +29,7 @@ using provided db configuration:
 
 #### Repository
 
-[Repositories installer](https://github.com/xvik/dropwizard-guicey-ext/tree/master/guicey-jdbi#repository): all jdbi proxies must be annotated with `@JdbiInstaller` so installer could recognize them.
+[Repositories installer](https://github.com/xvik/dropwizard-guicey-ext/tree/master/guicey-jdbi#repository): all jdbi proxies must be annotated with `@JdbiRepository` so installer could recognize them.
 See [UserRepository](src/main/java/ru/vyarus/dropwizard/guice/examples/repository/UserRepository.java) 
 
 Repository is annotated with `@InTransaction` to allow using repositories directly: repository method call is the smallest transaction scope. 
