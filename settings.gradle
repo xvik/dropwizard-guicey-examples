@@ -7,4 +7,5 @@ include 'getting-started',
         'manualconfig-installer',
         'bundle-base',
         'hibernate',
-        'jdbi'
+        'jdbi',
+        'eventbus'
