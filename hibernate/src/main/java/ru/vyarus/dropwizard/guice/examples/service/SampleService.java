@@ -29,6 +29,7 @@ public class SampleService extends AbstractDAO<Sample> {
         return persist(sample).getId();
     }
 
+    @SuppressWarnings("unchecked")
     public List<Sample> findAll() {
         return list(currentSession().createQuery("from Sample"));
     }
