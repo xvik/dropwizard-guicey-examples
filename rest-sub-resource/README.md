@@ -1,13 +1,12 @@
 ## Sub resources
 
-Default resource installer in guicey creates resource instance with guice and register it
-in jersey (resource is a guice bean). 
+Default resource installer in guicey registers resource instance, created with guice (resource is a guice bean). 
 
-There are two major ways to implement jersey [sub resources](https://jersey.github.io/documentation/latest/jaxrs-resources.html#d0e2542)
+There are two ways of implementing jersey [sub resources](https://jersey.github.io/documentation/latest/jaxrs-resources.html#d0e2542)
 
 ### Guice managed
 
-Idea is simple: sub resource is created as guice bean and it's instance returned from the resource method.
+Sub resource is created as guice bean and it's instance returned from the resource method.
 
 ```java
 @Path("/root")
@@ -36,7 +35,7 @@ public class SubResource {
 Note that `SubResource` is not annotated with `@Path`. If it will be annotated and classpath scan will be enabled,
 then sub resource should be annotated with `@InvisibleForScanner` to avoid sub resource installation as root resource.
 
-In order to access context parameters, jersey services must be used in sub resource:
+In order to access context parameters, jersey service must be used in sub resource:
 
 ```java
 @Path("/root")
@@ -64,7 +63,7 @@ public class SubResource {
 }
 ```
 
-Here sub resource access root resource path parameter.
+Here sub resource access path parameter, declared on root resource.
 
 ### Hk managed
 
@@ -95,7 +94,7 @@ public class SubResource {
 }
 ``` 
 
-Now sub resource is managed by HK container and so can use all jersey features. Sub resource
+Now sub resource is managed by HK container and so can use all jersey features. But sub resource
 instance will be created for each request.
 
 Note that if `SubResource` would be annotated with `@Path` it should be annotated with `@InvisibleForScanner`
@@ -116,7 +115,7 @@ GuiceBundle.builder()
         .option(GuiceyOptions.UseHkBridge, true)
 ```
 
-Now guice services could be injected inside hk managed bean:
+Now guice services could be injected inside hk managed beans:
 
 ```java
 public class SubResource {
