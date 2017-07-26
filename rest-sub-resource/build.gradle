@@ -1,0 +1,3 @@
+dependencies {
+    compile 'org.glassfish.hk2:guice-bridge'
+}

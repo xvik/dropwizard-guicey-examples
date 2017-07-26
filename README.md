@@ -23,6 +23,11 @@ application configured using classpath scan (auto config mode)
 * [Manual config](manualconfig-base) 
 application configured manually (without classpath scan)
 
+### REST
+
+* [Sub resources](rest-sub-resource)
+application demonstrating sub resource usage
+
 ### Installers
 
 * [Auto registered installer](autoconfig-installer) 

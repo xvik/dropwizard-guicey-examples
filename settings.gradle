@@ -8,4 +8,5 @@ include 'getting-started',
         'bundle-base',
         'hibernate',
         'jdbi',
-        'eventbus'
+        'eventbus',
+        'rest-sub-resource'
