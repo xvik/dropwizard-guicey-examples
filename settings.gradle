@@ -9,4 +9,5 @@ include 'getting-started',
         'hibernate',
         'jdbi',
         'eventbus',
-        'rest-sub-resource'
+        'rest-sub-resource',
+        'guice-validator'

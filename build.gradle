@@ -28,6 +28,7 @@ subprojects {
         dependencies {
             dependency 'io.dropwizard.modules:dropwizard-flyway:1.1.0-1'
             dependency 'com.h2database:h2:1.4.193'
+            dependency 'ru.vyarus:guice-validator:1.2.0'
         }
     }
     dependencies {

@@ -45,3 +45,9 @@ application with sample guicey bundle
 * [JDBI](jdbi) application with guicey JDBI integration (based on dropwizard-jdbi module)
 * [hibernate](hibernate) application with dropwizard-hibernate module integration
 * [EventBus](eventbus) application with guava eventbus usage example
+
+### 3rd party
+
+* [Guice-validator](guice-validator) application with [guice-validator](https://github.com/xvik/guice-validator) integration used to 
+validate method parameters and return values validation all guice beans + ability to use guice enabled validators. 
+By default, dropwizard applies such validations only for [rest resources](http://www.dropwizard.io/1.2.2/docs/manual/validation.html). 
