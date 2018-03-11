@@ -1,0 +1,3 @@
+dependencies {
+    compile 'de.spinscale.dropwizard:dropwizard-jobs-guice'
+}

@@ -50,4 +50,6 @@ application with sample guicey bundle
 
 * [Guice-validator](guice-validator) application with [guice-validator](https://github.com/xvik/guice-validator) integration used to 
 validate method parameters and return values validation all guice beans + ability to use guice enabled validators. 
-By default, dropwizard applies such validations only for [rest resources](http://www.dropwizard.io/1.2.2/docs/manual/validation.html). 
+By default, dropwizard applies such validations only for [rest resources](http://www.dropwizard.io/1.2.2/docs/manual/validation.html).
+* [dropwizard-jobs](dropwizard-jobs) application with [dropwizard-jobs](https://github.com/spinscale/dropwizard-jobs) integration used to run
+quartz jobs. 

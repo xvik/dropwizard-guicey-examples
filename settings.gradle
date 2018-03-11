@@ -10,4 +10,5 @@ include 'getting-started',
         'jdbi',
         'eventbus',
         'rest-sub-resource',
-        'guice-validator'
+        'guice-validator',
+        'dropwizard-jobs'
