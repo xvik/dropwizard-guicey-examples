@@ -1,5 +1,7 @@
 package ru.vyarus.dropwizard.guice.examples;
 
+import com.codahale.metrics.SharedMetricRegistries;
+import de.spinscale.dropwizard.jobs.Job;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
@@ -20,6 +22,9 @@ public class JobsApplication extends Application<JobsAppConfiguration> {
         bootstrap.addBundle(GuiceBundle.builder()
                 .enableAutoConfig(JobsApplication.class.getPackage().getName())
                 .build());
+
+        // force dropwizard-jobs using main metrics registry for all jobs
+        SharedMetricRegistries.add(Job.DROPWIZARD_JOBS_KEY, bootstrap.getMetricRegistry());
     }
 
     @Override

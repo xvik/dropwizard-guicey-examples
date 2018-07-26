@@ -73,6 +73,20 @@ public class JobsInstaller implements FeatureInstaller<Job>, TypeInstaller<Job> 
 It will be recognized and registered automatically. Installer performs two tasks: find job beans and bind to guice context (implicitly)
 and print all found jobs to console.
 
+And the final step is configure dopwizard metrics registry in the application class:
+
+```java
+@Override
+public void initialize(Bootstrap<JobsAppConfiguration> bootstrap) {
+    bootstrap.addBundle(GuiceBundle.builder()
+            .enableAutoConfig(JobsApplication.class.getPackage().getName())
+            .build());
+
+    // force dropwizard-jobs using main metrics registry for all jobs
+    SharedMetricRegistries.add(Job.DROPWIZARD_JOBS_KEY, bootstrap.getMetricRegistry());
+}
+```
+
 #### Sample job
 
 Now we can just declare jobs:
