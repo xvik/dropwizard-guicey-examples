@@ -44,6 +44,7 @@ application with sample guicey bundle
 ### Dropwizard modules
 
 * [JDBI](jdbi) application with guicey JDBI integration (based on dropwizard-jdbi module)
+* [JDBI3](jdbi3) application with guicey JDBI3 integration (based on dropwizard-jdbi3 module)
 * [hibernate](hibernate) application with dropwizard-hibernate module integration
 * [EventBus](eventbus) application with guava eventbus usage example
 
