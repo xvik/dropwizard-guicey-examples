@@ -1,0 +1,5 @@
+dependencies {
+    compile 'io.dropwizard:dropwizard-auth'
+
+    testCompile 'org.codehaus.groovy.modules.http-builder:http-builder:0.7.2'
+}
