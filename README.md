@@ -10,9 +10,10 @@ Usage examples for [dropwizard-guicey](https://github.com/xvik/dropwizard-guicey
 If you can't find answer for your problem in provided examples, please request new sample by 
 [creating new issue](https://github.com/xvik/dropwizard-guicey-examples/issues).
 
-All samples build with guicey 4.2.2 (dropwizard 1.3.7). [Extensions project BOM](https://github.com/xvik/dropwizard-guicey-ext/tree/master/guicey-bom) 
+All samples build with guicey 5.0.0-rc.2 (dropwizard 2.0.0-rc10). [Extensions project BOM](https://github.com/xvik/dropwizard-guicey-ext/tree/master/guicey-bom) 
 used for guicey, guice and dropwizard dependencies management.
 
+* [guicey 4.2.0 examples](https://github.com/xvik/dropwizard-guicey-examples/tree/4.2.0)
 * [guicey 4.1.0 examples](https://github.com/xvik/dropwizard-guicey-examples/tree/4.1.0)
 * [Dropwizard 0.9 examples](https://github.com/xvik/dropwizard-guicey-examples/tree/dw-0.9)
 

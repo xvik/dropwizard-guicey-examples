@@ -20,7 +20,6 @@ public class SampleApplication extends Application<Configuration> {
     public void initialize(Bootstrap<Configuration> bootstrap) {
         bootstrap.addBundle(GuiceBundle.builder()
                 .enableAutoConfig(getClass().getPackage().getName())
-                .useWebInstallers()
                 .modules(new SampleModule())
                 .build());
     }

@@ -19,6 +19,10 @@ class ServiceValidationTest extends Specification {
     @Inject
     SomeService service
 
+    static {
+        Locale.setDefault(Locale.ENGLISH)
+    }
+
     def "Check method validation success"() {
 
         when: "simple validation"
@@ -48,7 +52,7 @@ class ServiceValidationTest extends Specification {
         service.simpleValidation(null)
         then: "err"
         def ex = thrown(ConstraintViolationException)
-        ex.constraintViolations.first().message == 'may not be null'
+        ex.constraintViolations.first().message == 'must not be null'
 
         when: "custom validation on parameter"
         service.customValidationParameter('bee')
