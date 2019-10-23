@@ -24,7 +24,8 @@ used for guicey, guice and dropwizard dependencies management.
 application configured using classpath scan (auto config mode)
 * [Manual config](manualconfig-base) 
 application configured manually (without classpath scan)
-* [SPA HTML5 routes](spa) - example of HTML5 routes correct handling in single page application 
+* [SPA HTML5 routes](spa) - example of HTML5 routes correct handling in single page application
+* [Server pages exmaple](gsp) - guicey server pages usage example 
 
 ### REST
 

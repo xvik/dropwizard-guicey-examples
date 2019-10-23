@@ -14,4 +14,5 @@ include 'getting-started',
         'rest-sub-resource',
         'guice-validator',
         'dropwizard-jobs',
-        'spa'
+        'spa',
+        'gsp'
