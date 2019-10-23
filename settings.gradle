@@ -13,4 +13,5 @@ include 'getting-started',
         'eventbus',
         'rest-sub-resource',
         'guice-validator',
-        'dropwizard-jobs'
+        'dropwizard-jobs',
+        'spa'
