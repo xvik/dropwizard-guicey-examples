@@ -17,7 +17,7 @@ import ru.vyarus.dropwizard.guice.module.installer.util.Reporter;
  * @author Vyacheslav Rusakov
  * @since 11.03.2018
  */
-public class JobsInstaller implements FeatureInstaller<Job>, TypeInstaller<Job> {
+public class JobsInstaller implements FeatureInstaller, TypeInstaller<Job> {
 
     private final Reporter reporter = new Reporter(JobsInstaller.class, "jobs =");
 

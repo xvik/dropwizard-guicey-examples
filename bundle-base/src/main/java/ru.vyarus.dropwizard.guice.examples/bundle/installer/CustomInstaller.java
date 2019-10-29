@@ -15,7 +15,7 @@ import javax.inject.Singleton;
  * @author Vyacheslav Rusakov
  * @since 29.01.2016
  */
-public class CustomInstaller implements FeatureInstaller<Marker>, BindingInstaller {
+public class CustomInstaller implements FeatureInstaller, BindingInstaller {
 
     @Override
     public boolean matches(Class<?> type) {

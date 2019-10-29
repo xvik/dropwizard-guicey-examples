@@ -47,7 +47,7 @@ and register all found jobs.
 To avoid manual jobs registration we will use custom installer:
 
 ```java
-public class JobsInstaller implements FeatureInstaller<Job>, TypeInstaller<Job> {
+public class JobsInstaller implements FeatureInstaller, TypeInstaller<Job> {
 
     private final Reporter reporter = new Reporter(JobsInstaller.class, "jobs =");
 
