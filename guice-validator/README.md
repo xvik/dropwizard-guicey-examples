@@ -1,5 +1,7 @@
 ### Guice-validator example
 
+**INCOMPATIBLE WITH DROPWIZARD 2.0** Example will be fixed
+
 Example show [guice-validator](https://github.com/xvik/guice-validator) 3rd party library integration.
 
 By default, dropwizard support javax.validation annotations usage on [rest resources](http://www.dropwizard.io/1.2.2/docs/manual/validation.html).

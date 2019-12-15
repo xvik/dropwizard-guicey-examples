@@ -10,7 +10,7 @@ wrapper {
 description = 'Dropwizard guicey examples'
 
 ext {
-    guiceyBom = '5.0.0-0-rc.2'
+    guiceyBom = '5.0.0-0'
 }
 
 subprojects {
@@ -20,7 +20,7 @@ subprojects {
 
     sourceCompatibility = 1.8
 
-    repositories { jcenter(); mavenCentral(); mavenLocal() }
+    repositories { jcenter(); mavenCentral(); mavenLocal(); maven { url 'https://jitpack.io' } }
     dependencyManagement {
         imports {
             mavenBom "ru.vyarus.guicey:guicey-bom:$guiceyBom"

@@ -1,7 +1,6 @@
 package ru.vyarus.dropwizard.guice.examples.bundle.installer;
 
 import com.google.inject.Binder;
-import com.google.inject.Binding;
 import ru.vyarus.dropwizard.guice.module.installer.FeatureInstaller;
 import ru.vyarus.dropwizard.guice.module.installer.install.binding.BindingInstaller;
 import ru.vyarus.dropwizard.guice.module.installer.util.FeatureUtils;
@@ -23,18 +22,8 @@ public class CustomInstaller implements FeatureInstaller, BindingInstaller {
     }
 
     @Override
-    public void bindExtension(Binder binder, Class<?> type, boolean lazy) {
+    public void bind(Binder binder, Class<?> type, boolean lazy) {
         binder.bind(type).in(Singleton.class);
-    }
-
-    @Override
-    public <T> void checkBinding(Binder binder, Class<T> type, Binding<T> manualBinding) {
-        // nothing to do if already bound to guice
-    }
-
-    @Override
-    public void installBinding(Binder binder, Class<?> type) {
-
     }
 
     @Override

@@ -23,18 +23,8 @@ public class CustomInstaller implements FeatureInstaller, BindingInstaller {
     }
 
     @Override
-    public void bindExtension(Binder binder, Class<?> type, boolean lazy) {
+    public void bind(Binder binder, Class<?> type, boolean lazy) {
         binder.bind(type).in(Singleton.class);
-    }
-
-    @Override
-    public <T> void checkBinding(Binder binder, Class<T> type, Binding<T> manualBinding) {
-        // nothing to do if already bound to guice
-    }
-
-    @Override
-    public void installBinding(Binder binder, Class<?> type) {
-
     }
 
     @Override

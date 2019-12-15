@@ -10,7 +10,7 @@ Usage examples for [dropwizard-guicey](https://github.com/xvik/dropwizard-guicey
 If you can't find answer for your problem in provided examples, please request new sample by 
 [creating new issue](https://github.com/xvik/dropwizard-guicey-examples/issues).
 
-All samples build with guicey 5.0.0-rc.3 (dropwizard 2.0.0-rc12). [Extensions project BOM](https://github.com/xvik/dropwizard-guicey-ext/tree/master/guicey-bom) 
+All samples build with guicey 5.0.0 (dropwizard 2.0.0). [Extensions project BOM](https://github.com/xvik/dropwizard-guicey-ext/tree/master/guicey-bom) 
 used for guicey, guice and dropwizard dependencies management.
 
 * [guicey 4.2.0 examples](https://github.com/xvik/dropwizard-guicey-examples/tree/4.2.0)
@@ -54,7 +54,7 @@ application with sample guicey bundle
 
 ### 3rd party
 
-* [Guice-validator](guice-validator) application with [guice-validator](https://github.com/xvik/guice-validator) integration used to 
+* **TEMPORARY STALE** [Guice-validator](guice-validator) application with [guice-validator](https://github.com/xvik/guice-validator) integration used to 
 validate method parameters and return values validation all guice beans + ability to use guice enabled validators. 
 By default, dropwizard applies such validations only for [rest resources](http://www.dropwizard.io/1.2.2/docs/manual/validation.html).
 * [dropwizard-jobs](dropwizard-jobs) application with [dropwizard-jobs](https://github.com/spinscale/dropwizard-jobs) integration used to run
