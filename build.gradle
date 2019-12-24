@@ -26,7 +26,7 @@ subprojects {
             mavenBom "ru.vyarus.guicey:guicey-bom:$guiceyBom"
         }
         dependencies {
-            dependency 'ru.vyarus:guice-validator:1.2.0'
+            dependency 'ru.vyarus:guice-validator:2.0.0'
             dependency 'de.spinscale.dropwizard:dropwizard-jobs-guice:3.0.0'
         }
     }
