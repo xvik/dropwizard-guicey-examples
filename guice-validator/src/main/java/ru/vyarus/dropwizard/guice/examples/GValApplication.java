@@ -7,7 +7,7 @@ import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import ru.vyarus.dropwizard.guice.GuiceBundle;
 import ru.vyarus.dropwizard.guice.injector.lookup.InjectorLookup;
-import ru.vyarus.guice.validator.ImplicitValidationModule;
+import ru.vyarus.guice.validator.ValidationModule;
 
 import javax.validation.Validator;
 import javax.ws.rs.Path;
@@ -28,8 +28,9 @@ public class GValApplication extends Application<Configuration> {
                 .modules(
                         // register validation module, but with exclusion for rest resources (which are guice beans)
                         // because dropwizard already applies validation support there
-                        new ImplicitValidationModule(bootstrap.getValidatorFactory())
-                                .withMatcher(Matchers.not(Matchers.annotatedWith(Path.class)))
+                        new ValidationModule(bootstrap.getValidatorFactory())
+                                .targetClasses(Matchers.not(Matchers.annotatedWith(Path.class)))
+                                .targetMethods(Matchers.not(Matchers.annotatedWith(Path.class)))
                 )
                 .build());
     }

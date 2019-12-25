@@ -3,19 +3,16 @@ package ru.vyarus.dropwizard.guice.examples
 import ru.vyarus.dropwizard.guice.examples.service.SomeService
 import ru.vyarus.dropwizard.guice.examples.validator.bean.MyBean
 import ru.vyarus.dropwizard.guice.test.spock.UseGuiceyApp
-import spock.lang.Ignore
 import spock.lang.Specification
 
 import javax.inject.Inject
 import javax.validation.ConstraintViolationException
-
 
 /**
  * @author Vyacheslav Rusakov
  * @since 12.01.2018
  */
 @UseGuiceyApp(GValApplication)
-@Ignore
 class ServiceValidationTest extends Specification {
 
     @Inject

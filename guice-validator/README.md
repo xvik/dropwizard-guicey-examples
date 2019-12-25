@@ -1,7 +1,5 @@
 ### Guice-validator example
 
-**INCOMPATIBLE WITH DROPWIZARD 2.0** Example will be fixed
-
 Example show [guice-validator](https://github.com/xvik/guice-validator) 3rd party library integration.
 
 By default, dropwizard support javax.validation annotations usage on [rest resources](http://www.dropwizard.io/1.2.2/docs/manual/validation.html).
@@ -15,7 +13,7 @@ Add guice-validator dependency:
 
 ```groovy
 dependencies {
-    compile 'ru.vyarus:guice-validator:1.2.0'
+    compile 'ru.vyarus:guice-validator:2.0.0'
 }
 ```
 
@@ -24,8 +22,9 @@ all validation annotations in guice beans:
 
 ```java
 .modules(
-        new ImplicitValidationModule(bootstrap.getValidatorFactory())
-      .withMatcher(Matchers.not(Matchers.annotatedWith(Path.class)))
+        new ValidationModule(bootstrap.getValidatorFactory())
+                .targetClasses(Matchers.not(Matchers.annotatedWith(Path.class)))
+                .targetMethods(Matchers.not(Matchers.annotatedWith(Path.class))))
 )
 ``` 
 
