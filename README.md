@@ -20,7 +20,7 @@ used for guicey, guice and dropwizard dependencies management.
 ### Guicey examples
 
 * [Getting started](core-getting-started) - example application from getting started documentation chapter
-* [Autoconfig](core-autoconfig-base) - classpath scan example
+* [Extensions](core-extensions) - ways of extensions declaration
 * [Manual config](core-manualconfig-base) - manual extension declaration example
 * [Auto registered installer](core-autoconfig-installer) - custom installer (auto config mode)
 * [Manually registered installer](core-manualconfig-installer) - custom installer configured manually (without classpath scan)

@@ -1,17 +1,18 @@
 package ru.vyarus.dropwizard.guice.examples.rest;
 
-import ru.vyarus.dropwizard.guice.examples.AutoscanModule;
+import ru.vyarus.dropwizard.guice.examples.AppModule;
 import ru.vyarus.dropwizard.guice.examples.service.SampleService;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 /**
  * Resource instantiated by guice. {@link SampleService} interface implementation is configured in guice module
- * {@link AutoscanModule}.
+ * {@link AppModule}.
  *
  * {@link ru.vyarus.dropwizard.guice.module.installer.feature.jersey.ResourceInstaller} will force singleton
  * for resource, so manual singleton definition is not required.
@@ -20,15 +21,11 @@ import javax.ws.rs.core.Response;
  * @since 27.01.2016
  */
 @Path("/sample")
-@Produces("application/json")
-public class SampleResource {
-
-    private final SampleService service;
+@Produces(MediaType.APPLICATION_JSON)
+public class MyResource {
 
     @Inject
-    public SampleResource(SampleService service) {
-        this.service = service;
-    }
+    private SampleService service;
 
     @GET
     @Path("/")

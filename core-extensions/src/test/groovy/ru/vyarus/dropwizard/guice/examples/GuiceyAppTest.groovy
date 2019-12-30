@@ -11,7 +11,7 @@ import javax.inject.Inject
  * @author Vyacheslav Rusakov
  * @since 27.01.2016
  */
-@UseGuiceyApp(AutoscanApplication)
+@UseGuiceyApp(ExtensionsDemoApplication)
 class GuiceyAppTest extends Specification {
 
     @Inject

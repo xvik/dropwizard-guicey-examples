@@ -7,12 +7,14 @@ import spock.lang.Specification;
  * @author Vyacheslav Rusakov
  * @since 27.01.2016
  */
-@UseDropwizardApp(AutoscanApplication)
-class ResourceTest extends Specification {
+@UseDropwizardApp(ExtensionsDemoApplication)
+class ResourcesTest extends Specification {
 
     def "Check resource call"() {
 
-        expect: "call resource"
+        expect: "call resources"
         new URL("http://localhost:8080/sample").getText() == "foo"
+        new URL("http://localhost:8080/sample2").getText() == "foo"
+        new URL("http://localhost:8080/sample3").getText() == "foo"
     }
 }
