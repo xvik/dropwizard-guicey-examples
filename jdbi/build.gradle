@@ -1,5 +1,0 @@
-dependencies {
-    compile 'ru.vyarus.guicey:guicey-jdbi'
-    compile 'com.h2database:h2'
-    compile 'io.dropwizard.modules:dropwizard-flyway'
-}

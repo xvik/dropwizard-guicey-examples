@@ -17,45 +17,27 @@ used for guicey, guice and dropwizard dependencies management.
 * [guicey 4.1.0 examples](https://github.com/xvik/dropwizard-guicey-examples/tree/4.1.0)
 * [Dropwizard 0.9 examples](https://github.com/xvik/dropwizard-guicey-examples/tree/dw-0.9)
 
-### Example applications
+### Guicey examples
 
-* [Getting started](getting-started) - example application from getting started documentation chapter.
-* [Autoconfig](autoconfig-base) 
-application configured using classpath scan (auto config mode)
-* [Manual config](manualconfig-base) 
-application configured manually (without classpath scan)
-* [SPA HTML5 routes](spa) - example of HTML5 routes correct handling in single page application
-* [Server pages exmaple](gsp) - guicey server pages usage example 
+* [Getting started](core-getting-started) - example application from getting started documentation chapter
+* [Autoconfig](core-autoconfig-base) - classpath scan example
+* [Manual config](core-manualconfig-base) - manual extension declaration example
+* [Auto registered installer](core-autoconfig-installer) - custom installer (auto config mode)
+* [Manually registered installer](core-manualconfig-installer) - custom installer configured manually (without classpath scan)
+* [Guicey bundle definition](core-bundle-base) - custom guicey bundle example 
+* [Sub resources](core-rest-sub-resource) - sub resource usage example
 
-### REST
+### Guicey ext modules examples
 
-* [Sub resources](rest-sub-resource)
-application demonstrating sub resource usage
+* [JDBI](ext-jdbi) JDBI ext module example (deprecated) 
+* [JDBI3](ext-jdbi3) JDBI3 ext module example
+* [EventBus](ext-eventbus) guava eventbus ext module example
+* [SPA HTML5 routes](ext-spa) - SPA ext module example: HTML5 routes correct handling on server (for single page application)
+* [Server pages exmaple](ext-gsp) - GSP example: server side templates and assets management
 
-### Installers
+### Other integrations
 
-* [Auto registered installer](autoconfig-installer) 
-application with custom installer (auto config mode)
-* [Manually registered installer](manualconfig-installer) 
-application with custom installer configured manually (without classpath scan)
-
-### Guicey bundles
-
-* [Guicey bundle definition](bundle-base) 
-application with sample guicey bundle
-
-### Dropwizard modules
-
-* [Auth](auth) application with dropwizard-auth integration
-* [JDBI](jdbi) application with guicey JDBI integration (based on dropwizard-jdbi module)
-* [JDBI3](jdbi3) application with guicey JDBI3 integration (based on dropwizard-jdbi3 module)
-* [hibernate](hibernate) application with dropwizard-hibernate module integration
-* [EventBus](eventbus) application with guava eventbus usage example
-
-### 3rd party
-
-* [Guice-validator](guice-validator) application with [guice-validator](https://github.com/xvik/guice-validator) integration used to 
-validate method parameters and return values validation all guice beans + ability to use guice enabled validators. 
-By default, dropwizard applies such validations only for [rest resources](http://www.dropwizard.io/1.2.2/docs/manual/validation.html).
-* [dropwizard-jobs](dropwizard-jobs) application with [dropwizard-jobs](https://github.com/spinscale/dropwizard-jobs) integration used to run
-quartz jobs. 
+* [Auth](integration-auth) dropwizard-auth integration example
+* [Hibernate](integration-hibernate) dropwizard-hibernate integration example
+* [Guice-validator](integration-guice-validator) guice-validator integration example
+* [Dropwizard-jobs](integration-dropwizard-jobs) dropwizard-jobs integration example
