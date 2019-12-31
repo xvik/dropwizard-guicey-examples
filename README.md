@@ -25,7 +25,7 @@ used for guicey, guice and dropwizard dependencies management.
 * [Sub resources](core-rest-sub-resource) - sub resource usage example
 * [Plug-n-play bundle](core-bundle-plug-n-play) - example of bundle, activated after its appearance in classpath
 * [Default installers re-configuration](core-installers-reset) - using only subset of default installers
-* [Custom installer implementation](core-custom-installer) - manual extension declaration example
+* [Custom installer implementation](core-installer-custom) - manual extension declaration example
 
 ### Guicey ext modules examples
 
