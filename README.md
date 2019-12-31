@@ -25,6 +25,7 @@ used for guicey, guice and dropwizard dependencies management.
 * [Auto registered installer](core-autoconfig-installer) - custom installer (auto config mode)
 * [Manually registered installer](core-manualconfig-installer) - custom installer configured manually (without classpath scan)
 * [Guicey bundle definition](core-bundle-base) - custom guicey bundle example 
+* [Servlets and filters](core-servlets) - servlets and filters registration example
 * [Sub resources](core-rest-sub-resource) - sub resource usage example
 
 ### Guicey ext modules examples
