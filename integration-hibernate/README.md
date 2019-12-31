@@ -56,3 +56,33 @@ and [simple resource](src/main/java/ru/vyarus/dropwizard/guice/examples/rest/Sam
 
 [Test](src/test/groovy/ru/vyarus/dropwizard/guice/examples/HbnResourceTest.groovy) starts application
 with in-memory h2 db ([see config](src/test/resources/config.yml)).
+
+#### Session in servlet or filter
+
+If you need to access hibernate in servlet or filter you will need to manage session manually.
+For example:
+
+```java                
+@WebFilter("/*")
+@Singleton
+public class MyFilter {
+
+    @Inject
+    private SessionFactory sessionFactory;
+
+    @Override
+    public void doFilter(ServletRequest servletRequest, 
+                         ServletResponse servletResponse,
+                         FilterChain filterChain) 
+                throws IOException, ServletException {
+
+        Session session = sessionFactory.openSession();
+        ManagedSessionContext.bind(session);
+        try {
+           // session opened, hibernate could be used
+        } finally {
+          ManagedSessionContext.unbind(sessionFactory); 
+          session.close();
+        }
+    }
+``` 
