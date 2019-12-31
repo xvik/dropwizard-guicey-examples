@@ -65,7 +65,7 @@ For example:
 ```java                
 @WebFilter("/*")
 @Singleton
-public class MyFilter {
+public class MyFilter implments Filter {
 
     @Inject
     private SessionFactory sessionFactory;
@@ -84,5 +84,6 @@ public class MyFilter {
           ManagedSessionContext.unbind(sessionFactory); 
           session.close();
         }
-    }
+    } 
+}
 ``` 
