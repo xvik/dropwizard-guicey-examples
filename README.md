@@ -20,10 +20,10 @@ used for guicey, guice and dropwizard dependencies management.
 ### Guicey examples
 
 * [Getting started](core-getting-started) - example application from getting started documentation chapter
-* [Extensions](core-extensions) - ways of extensions declaration
-* [Guicey bundle definition](core-bundle-base) - custom guicey bundle example 
+* [Extensions](core-extensions) - ways of extensions declaration 
 * [Servlets and filters](core-servlets) - servlets and filters registration example
 * [Sub resources](core-rest-sub-resource) - sub resource usage example
+* [Plug-n-play bundle](core-bundle-plug-n-play) - example of bundle, activated after its appearance in classpath
 * [Default installers re-configuration](core-installers-reset) - using only subset of default installers
 * [Custom installer implementation](core-custom-installer) - manual extension declaration example
 

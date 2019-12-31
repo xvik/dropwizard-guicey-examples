@@ -5,20 +5,20 @@ import io.dropwizard.Configuration;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import ru.vyarus.dropwizard.guice.GuiceBundle;
-import ru.vyarus.dropwizard.guice.examples.bundle.SomeBundle;
+import ru.vyarus.dropwizard.guice.examples.bundle.SampleBundle;
 
 /**
- * Guicey bundle usage sample.
- *
  * @author Vyacheslav Rusakov
- * @since 29.01.2016
+ * @since 31.12.2019
  */
-public class BundleBaseApplication extends Application<Configuration> {
+public class PlugnPlayBundleOverrideApplication extends Application<Configuration> {
 
     @Override
     public void initialize(Bootstrap<Configuration> bootstrap) {
         bootstrap.addBundle(GuiceBundle.builder()
-                .bundles(new SomeBundle())
+                // override default bundle
+                .bundles(new SampleBundle("changed!"))
+                .printDiagnosticInfo()
                 .build());
     }
 

@@ -2,9 +2,9 @@ rootProject.name = 'dropwizard-guicey-examples'
 
 include 'core-getting-started',
         'core-extensions',
-        'core-bundle-base',
         'core-servlets',
         'core-rest-sub-resource',
+        'core-bundle-plug-n-play',
         'core-installers-reset',
         'core-custom-installer',
         'ext-jdbi',
