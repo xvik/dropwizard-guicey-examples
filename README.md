@@ -29,15 +29,15 @@ used for guicey, guice and dropwizard dependencies management.
 
 ### Guicey ext modules examples
 
-* [JDBI](ext-jdbi) JDBI ext module example (deprecated) 
-* [JDBI3](ext-jdbi3) JDBI3 ext module example
-* [EventBus](ext-eventbus) guava eventbus ext module example
+* [JDBI](ext-jdbi) - JDBI ext module example (deprecated) 
+* [JDBI3](ext-jdbi3) - JDBI3 ext module example
+* [EventBus](ext-eventbus) - guava eventbus ext module example
 * [SPA HTML5 routes](ext-spa) - SPA ext module example: HTML5 routes correct handling on server (for single page application)
 * [Server pages exmaple](ext-gsp) - GSP example: server side templates and assets management
 
 ### Other integrations
 
-* [Auth](integration-auth) dropwizard-auth integration example
-* [Hibernate](integration-hibernate) dropwizard-hibernate integration example
-* [Guice-validator](integration-guice-validator) guice-validator integration example
-* [Dropwizard-jobs](integration-dropwizard-jobs) dropwizard-jobs integration example
+* [Auth](integration-auth) - dropwizard-auth integration example
+* [Hibernate](integration-hibernate) - dropwizard-hibernate integration example
+* [Guice-validator](integration-guice-validator) - guice-validator integration example
+* [Dropwizard-jobs](integration-dropwizard-jobs) - dropwizard-jobs integration example
