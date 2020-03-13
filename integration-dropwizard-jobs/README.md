@@ -1,6 +1,6 @@
 ### Dropwizard-jobs example
 
-Example show [dropwizard-jobs](https://github.com/spinscale/dropwizard-jobs) 3rd party library integration.
+Example show [dropwizard-jobs](https://github.com/dropwizard-jobs/dropwizard-jobs) 3rd party library integration.
 
 NOTE: this is very basic integration. Normally it deserves special ext module, but it's not yet exists.
 
@@ -10,7 +10,7 @@ Add dropwizard-jobs dependency:
 
 ```groovy
 dependencies {
-    compile 'de.spinscale.dropwizard:dropwizard-jobs-guice:3.0.0'
+    compile 'io.github.dropwizard-jobs:dropwizard-jobs-guice:4.0.0-SNAPSHOT'
 }
 ```
 
@@ -23,7 +23,7 @@ public class JobsAppConfiguration extends Configuration implements JobConfigurat
 ```
 
 Library already provides guice integration, but it couldn't be used directly as it requires immediate
-injector presence. Instead we will use two guicey extensions. 
+injector presence. Instead, we will use two guicey extensions. 
 
 Note that application will search and install extensions using classpath scan: `.enableAutoConfig(JobsApplication.class.getPackage().getName())`
 
@@ -35,8 +35,7 @@ public class JobsManager extends GuiceJobManager {
 
     @Inject
     public JobsManager(Injector injector, JobsAppConfiguration configuration) {
-        super(injector);
-        configure(configuration);
+        super(configuration, injector);
     }
 }
 ```

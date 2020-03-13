@@ -1,8 +1,8 @@
 package ru.vyarus.dropwizard.guice.examples;
 
 import com.codahale.metrics.SharedMetricRegistries;
-import de.spinscale.dropwizard.jobs.Job;
 import io.dropwizard.Application;
+import io.dropwizard.jobs.Job;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import ru.vyarus.dropwizard.guice.GuiceBundle;

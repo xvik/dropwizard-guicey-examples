@@ -27,7 +27,7 @@ subprojects {
         }
         dependencies {
             dependency 'ru.vyarus:guice-validator:2.0.0'
-            dependency 'de.spinscale.dropwizard:dropwizard-jobs-guice:3.0.0'
+            dependency 'io.github.dropwizard-jobs:dropwizard-jobs-guice:4.0.0-RELEASE'
         }
     }
     dependencies {

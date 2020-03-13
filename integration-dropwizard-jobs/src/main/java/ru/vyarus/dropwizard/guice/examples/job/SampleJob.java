@@ -1,14 +1,14 @@
 package ru.vyarus.dropwizard.guice.examples.job;
 
-import de.spinscale.dropwizard.jobs.Job;
-import de.spinscale.dropwizard.jobs.annotations.Every;
+import io.dropwizard.jobs.Job;
+import io.dropwizard.jobs.annotations.Every;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 
 import javax.inject.Singleton;
 
 /**
- * Job will be registered automatically by {@link de.spinscale.dropwizard.jobs.GuiceJobManager}
+ * Job will be registered automatically by {@link io.dropwizard.jobs.GuiceJobManager}
  * (which is activate in  {@link ru.vyarus.dropwizard.guice.examples.support.JobsManager}).
  *
  * @author Vyacheslav Rusakov

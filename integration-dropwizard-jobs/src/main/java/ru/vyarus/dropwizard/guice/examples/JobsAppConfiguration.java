@@ -1,9 +1,10 @@
 package ru.vyarus.dropwizard.guice.examples;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import de.spinscale.dropwizard.jobs.JobConfiguration;
 import io.dropwizard.Configuration;
+import io.dropwizard.jobs.JobConfiguration;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -13,7 +14,7 @@ import java.util.Map;
 public class JobsAppConfiguration extends Configuration implements JobConfiguration {
 
     @JsonProperty("quartz")
-    private Map<String, String> quartz;
+    private Map<String, String> quartz = new HashMap<>();
 
     public Map<String, String> getQuartzConfiguration() {
         return quartz;

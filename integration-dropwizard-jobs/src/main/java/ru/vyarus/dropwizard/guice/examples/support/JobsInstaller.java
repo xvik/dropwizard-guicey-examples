@@ -1,18 +1,16 @@
 package ru.vyarus.dropwizard.guice.examples.support;
 
-import de.spinscale.dropwizard.jobs.Job;
-import io.dropwizard.lifecycle.Managed;
+import io.dropwizard.jobs.Job;
 import io.dropwizard.setup.Environment;
 import ru.vyarus.dropwizard.guice.module.installer.FeatureInstaller;
-import ru.vyarus.dropwizard.guice.module.installer.feature.ManagedInstaller;
 import ru.vyarus.dropwizard.guice.module.installer.install.TypeInstaller;
 import ru.vyarus.dropwizard.guice.module.installer.util.FeatureUtils;
 import ru.vyarus.dropwizard.guice.module.installer.util.Reporter;
 
 /**
  * Installer performs utility tasks:
- *  - searches for jobs and bind them to guice context (so {@link JobsManager} could install them
- *  - print registered jobs to console
+ * - searches for jobs and bind them to guice context (so {@link JobsManager} could install them
+ * - print registered jobs to console
  *
  * @author Vyacheslav Rusakov
  * @since 11.03.2018
