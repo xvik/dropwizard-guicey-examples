@@ -3,7 +3,7 @@
 [Documentation](http://xvik.github.io/dropwizard-guicey/4.2.2/examples/authentication/) describes 
 dropwizard auth module usage in general. This example app shows OAuth configuration only.
 
-Dropwizard-auth module required: `compile 'io.dropwizard:dropwizard-auth`
+Dropwizard-auth module required: `implementation 'io.dropwizard:dropwizard-auth`
 
 `OAuthDynamicFeature` is installed automatically by classpath scan.
  

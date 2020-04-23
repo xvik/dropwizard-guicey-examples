@@ -1,4 +1,4 @@
 dependencies {
-    compile 'ru.vyarus.guicey:guicey-server-pages'
-    compile 'io.dropwizard:dropwizard-views-freemarker'
+    implementation 'ru.vyarus.guicey:guicey-server-pages'
+    implementation 'io.dropwizard:dropwizard-views-freemarker'
 }

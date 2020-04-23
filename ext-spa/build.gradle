@@ -1,3 +1,3 @@
 dependencies {
-    compile 'ru.vyarus.guicey:guicey-spa'
+    implementation 'ru.vyarus.guicey:guicey-spa'
 }

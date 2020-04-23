@@ -1,5 +1,5 @@
 dependencies {
-    compile 'ru.vyarus.guicey:guicey-jdbi'
-    compile 'com.h2database:h2'
-    compile 'io.dropwizard.modules:dropwizard-flyway'
+    implementation 'ru.vyarus.guicey:guicey-jdbi'
+    implementation 'com.h2database:h2'
+    implementation 'io.dropwizard.modules:dropwizard-flyway'
 }

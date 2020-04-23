@@ -105,7 +105,7 @@ If guice dependencies required in sub resource then hk bridge [MUST be enabled](
 Add dependency
 
 ```groovy
-compile 'org.glassfish.hk2:guice-bridge'
+implementation 'org.glassfish.hk2:guice-bridge'
 ``` 
 
 Enable option

@@ -10,7 +10,7 @@ Add dropwizard-jobs dependency:
 
 ```groovy
 dependencies {
-    compile 'io.github.dropwizard-jobs:dropwizard-jobs-guice:4.0.0-SNAPSHOT'
+    implementation 'io.github.dropwizard-jobs:dropwizard-jobs-guice:4.0.0-SNAPSHOT'
 }
 ```
 

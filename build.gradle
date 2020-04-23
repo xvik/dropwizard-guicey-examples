@@ -1,10 +1,9 @@
 plugins {
-    id 'com.github.ben-manes.versions' version '0.27.0'
-    id "io.spring.dependency-management" version "1.0.9.RELEASE"
+    id 'com.github.ben-manes.versions' version '0.28.0'
 }
 
 wrapper {
-    gradleVersion = 4.6
+    gradleVersion = '6.3'
 }
 
 description = 'Dropwizard guicey examples'
@@ -15,25 +14,22 @@ ext {
 
 subprojects {
     apply plugin: 'groovy'
-    apply plugin: 'io.spring.dependency-management'
     apply plugin: 'project-report'
 
     sourceCompatibility = 1.8
 
     repositories { jcenter(); mavenCentral(); mavenLocal(); maven { url 'https://jitpack.io' } }
-    dependencyManagement {
-        imports {
-            mavenBom "ru.vyarus.guicey:guicey-bom:$guiceyBom"
-        }
-        dependencies {
-            dependency 'io.github.dropwizard-jobs:dropwizard-jobs-guice:4.0.0-RELEASE'
-        }
-    }
     dependencies {
-        compile 'ru.vyarus:dropwizard-guicey'
+        implementation platform("ru.vyarus.guicey:guicey-bom:$guiceyBom")
 
-        testCompile 'org.spockframework:spock-core'
-        testCompile "io.dropwizard:dropwizard-testing"
+        constraints {
+            implementation 'io.github.dropwizard-jobs:dropwizard-jobs-guice:4.0.0-RELEASE'
+        }
+
+        implementation 'ru.vyarus:dropwizard-guicey'
+
+        testImplementation 'org.spockframework:spock-core'
+        testImplementation "io.dropwizard:dropwizard-testing"
     }
 
     test {

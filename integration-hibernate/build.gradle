@@ -1,4 +1,4 @@
 dependencies {
-    compile 'io.dropwizard:dropwizard-hibernate'
-    compile 'com.h2database:h2'
+    implementation 'io.dropwizard:dropwizard-hibernate'
+    implementation 'com.h2database:h2'
 }

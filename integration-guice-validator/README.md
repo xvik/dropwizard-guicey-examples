@@ -13,7 +13,7 @@ Add guice-validator dependency:
 
 ```groovy
 dependencies {
-    compile 'ru.vyarus:guice-validator:2.0.0'
+    implementation 'ru.vyarus:guice-validator:2.0.0'
 }
 ```
 
