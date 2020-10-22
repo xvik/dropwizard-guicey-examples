@@ -34,6 +34,7 @@ used for guicey, guice and dropwizard dependencies management.
 * [EventBus](ext-eventbus) - guava eventbus ext module example
 * [SPA HTML5 routes](ext-spa) - SPA ext module example: HTML5 routes correct handling on server (for single page application)
 * [Server pages exmaple](ext-gsp) - GSP example: server side templates and assets management
+* [Server pages SPA exmaple](ext-gsp-spa) - use GSP templates for SPA index page
 
 ### Other integrations
 
