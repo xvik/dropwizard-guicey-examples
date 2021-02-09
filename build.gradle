@@ -22,7 +22,7 @@ subprojects {
         resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
     }
 
-    repositories {jcenter(); mavenCentral(); mavenLocal(); maven { url 'https://jitpack.io' }}
+    repositories { mavenCentral(); mavenLocal(); maven { url 'https://jitpack.io' }}
     dependencies {
         implementation platform("ru.vyarus.guicey:guicey-bom:$guiceyBom")
 
