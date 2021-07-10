@@ -1,9 +1,9 @@
 plugins {
-    id 'com.github.ben-manes.versions' version '0.38.0'
+    id 'com.github.ben-manes.versions' version '0.39.0'
 }
 
 wrapper {
-    gradleVersion = '6.3'
+    gradleVersion = '6.9'
 }
 
 description = 'Dropwizard guicey examples'
@@ -22,7 +22,7 @@ subprojects {
         resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
     }
 
-    repositories { mavenCentral(); mavenLocal(); maven { url 'https://jitpack.io' }}
+    repositories { mavenLocal(); mavenCentral(); maven { url 'https://jitpack.io' }}
     dependencies {
         implementation platform("ru.vyarus.guicey:guicey-bom:$guiceyBom")
 
@@ -38,7 +38,7 @@ subprojects {
 
     test {
         testLogging {
-            events "skipped", "failed", "standard_error"
+            events "skipped", "failed"
             exceptionFormat "full"
         }
         maxHeapSize = "512m"
