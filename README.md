@@ -1,6 +1,6 @@
 # dropwizard-guicey examples
 [![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://www.opensource.org/licenses/MIT)
-[![Build Status](https://travis-ci.org/xvik/dropwizard-guicey-examples.svg?branch=master)](https://travis-ci.org/xvik/dropwizard-guicey-examples)
+[![Build Status](https://travis-ci.com/xvik/dropwizard-guicey-examples.svg?branch=master)](https://travis-ci.com/xvik/dropwizard-guicey-examples)
 
 ### About
 
