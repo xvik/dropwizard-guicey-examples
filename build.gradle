@@ -32,7 +32,8 @@ subprojects {
 
         implementation 'ru.vyarus:dropwizard-guicey'
 
-        testImplementation 'org.spockframework:spock-core'
+        testImplementation 'org.spockframework:spock-core:2.0-groovy-3.0'
+        testImplementation 'ru.vyarus:spock-junit5:1.0.0'
         testImplementation "io.dropwizard:dropwizard-testing"
     }
 

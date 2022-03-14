@@ -5,7 +5,7 @@ import com.google.inject.Key
 import ru.vyarus.dropwizard.guice.examples.installer.MarkersInstaller
 import ru.vyarus.dropwizard.guice.examples.service.SampleMarker
 import ru.vyarus.dropwizard.guice.module.GuiceyConfigurationInfo
-import ru.vyarus.dropwizard.guice.test.spock.UseGuiceyApp
+import ru.vyarus.dropwizard.guice.test.jupiter.TestGuiceyApp
 import spock.lang.Specification
 
 import javax.inject.Inject
@@ -14,7 +14,7 @@ import javax.inject.Inject
  * @author Vyacheslav Rusakov
  * @since 29.01.2016
  */
-@UseGuiceyApp(CustomInstallerApplication)
+@TestGuiceyApp(CustomInstallerApplication)
 class AppTest extends Specification {
 
     @Inject

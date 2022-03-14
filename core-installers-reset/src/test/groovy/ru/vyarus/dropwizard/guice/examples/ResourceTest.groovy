@@ -1,13 +1,13 @@
 package ru.vyarus.dropwizard.guice.examples
 
-import ru.vyarus.dropwizard.guice.test.spock.UseDropwizardApp
-import spock.lang.Specification;
+import ru.vyarus.dropwizard.guice.test.jupiter.TestDropwizardApp
+import spock.lang.Specification
 
 /**
  * @author Vyacheslav Rusakov
  * @since 27.01.2016
  */
-@UseDropwizardApp(InstallersResetApplication)
+@TestDropwizardApp(InstallersResetApplication)
 class ResourceTest extends Specification {
 
     def "Check resource call"() {

@@ -1,13 +1,13 @@
 package ru.vyarus.dropwizard.guice.examples
 
-import ru.vyarus.dropwizard.guice.test.spock.UseDropwizardApp
+import ru.vyarus.dropwizard.guice.test.jupiter.TestDropwizardApp
 import spock.lang.Specification
 
 /**
  * @author Vyacheslav Rusakov
  * @since 23.10.2019
  */
-@UseDropwizardApp(SpaApplication)
+@TestDropwizardApp(SpaApplication)
 class RouteTest extends Specification {
 
     def "Check rout usl leads to html page"() {

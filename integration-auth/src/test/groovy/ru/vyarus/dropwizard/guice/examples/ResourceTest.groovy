@@ -1,69 +1,61 @@
 package ru.vyarus.dropwizard.guice.examples
 
-import groovyx.net.http.HTTPBuilder
-import groovyx.net.http.HttpResponseException
-import ru.vyarus.dropwizard.guice.test.spock.UseDropwizardApp
+
+import ru.vyarus.dropwizard.guice.test.ClientSupport
+import ru.vyarus.dropwizard.guice.test.jupiter.TestDropwizardApp
 import spock.lang.Specification
 
-import javax.ws.rs.core.HttpHeaders;
+import javax.ws.rs.core.HttpHeaders
 
 /**
  * @author Vyacheslav Rusakov
  * @since 27.01.2016
  */
-@UseDropwizardApp(AuthApplication)
+@TestDropwizardApp(AuthApplication)
 class ResourceTest extends Specification {
 
-    def "Check auth"() {
+    def "Check auth"(ClientSupport client) {
 
         when: "calling resource without auth"
-        new HTTPBuilder("http://localhost:8080/adm").get([:])
-
-        then: "user authorized"
-        def ex = thrown(HttpResponseException)
-        ex.statusCode == 401
+        def res = client.targetMain('/adm').request().get()
+        then: "user not authorized"
+        res.status == 401
 
 
         when: "calling resource without auth"
-        new HTTPBuilder("http://localhost:8080/auth").get([:])
-
+        res = client.targetMain('/auth').request().get()
         then: "user authorized"
-        ex = thrown(HttpResponseException)
-        ex.statusCode == 401
+        res.status == 401
 
 
         when: "calling resource with incorrect auth"
-        new HTTPBuilder("http://localhost:8080/adm").get(
-                headers: ["${HttpHeaders.AUTHORIZATION}": "Bearer invalid"])
-
-        then: "user authorized"
-        ex = thrown(HttpResponseException)
-        ex.statusCode == 401
+        res = client.targetMain('/adm').request()
+                .header(HttpHeaders.AUTHORIZATION, "Bearer invalid").get()
+        then: "user not authorized"
+        res.status == 401
 
 
         when: "calling resource with proper auth and role"
-        def res = new HTTPBuilder("http://localhost:8080/adm").get(
-                headers: ["${HttpHeaders.AUTHORIZATION}": "Bearer valid"]).text
-
+        res = client.targetMain('/adm').request()
+                .header(HttpHeaders.AUTHORIZATION, "Bearer valid").get()
         then: "user authorized"
-        res == 'admin'
+        res.status == 200
+        res.readEntity(String) == 'admin'
 
 
         when: "calling resource required auth"
-        res = new HTTPBuilder("http://localhost:8080/auth").get(
-                headers: ["${HttpHeaders.AUTHORIZATION}": "Bearer valid"]).text
-
+        res = client.targetMain('/auth').request()
+                .header(HttpHeaders.AUTHORIZATION, "Bearer valid").get()
         then: "user authorized"
-        res == 'admin'
+        res.status == 200
+        res.readEntity(String) == 'admin'
 
 
         when: "calling resource using user without proper role"
-        new HTTPBuilder("http://localhost:8080/deny").get(
-                headers: ["${HttpHeaders.AUTHORIZATION}": "Bearer valid"])
-
-        then: "user authorized"
-        ex = thrown(HttpResponseException)
-        ex.statusCode == 403
+        res = client.targetMain('/deny').request()
+                .header(HttpHeaders.AUTHORIZATION, "Bearer valid").get()
+        then: "user not authorized"
+        res.status == 403
 
     }
 }

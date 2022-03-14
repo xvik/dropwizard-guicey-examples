@@ -2,7 +2,7 @@ package ru.vyarus.dropwizard.guice.examples
 
 import org.glassfish.jersey.client.JerseyClientBuilder
 import org.glassfish.jersey.client.JerseyWebTarget
-import ru.vyarus.dropwizard.guice.test.spock.UseDropwizardApp
+import ru.vyarus.dropwizard.guice.test.jupiter.TestDropwizardApp
 import spock.lang.Specification
 
 import javax.ws.rs.BadRequestException
@@ -12,7 +12,7 @@ import javax.ws.rs.client.Client
  * @author Vyacheslav Rusakov
  * @since 12.01.2018
  */
-@UseDropwizardApp(GValApplication)
+@TestDropwizardApp(GValApplication)
 class RestValidationTest extends Specification {
 
     def "Check rest methods validation"() {

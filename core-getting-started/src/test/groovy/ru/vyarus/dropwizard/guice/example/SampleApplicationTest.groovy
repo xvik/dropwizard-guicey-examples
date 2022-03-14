@@ -1,14 +1,14 @@
 package ru.vyarus.dropwizard.guice.example
 
 import ru.vyarus.dropwizard.guice.examples.SampleApplication
-import ru.vyarus.dropwizard.guice.test.spock.UseDropwizardApp
+import ru.vyarus.dropwizard.guice.test.jupiter.TestDropwizardApp
 import spock.lang.Specification
 
 /**
  * @author Vyacheslav Rusakov
  * @since 06.03.2017
  */
-@UseDropwizardApp(SampleApplication)
+@TestDropwizardApp(SampleApplication)
 class SampleApplicationTest extends Specification {
 
     def "Check application startup"() {

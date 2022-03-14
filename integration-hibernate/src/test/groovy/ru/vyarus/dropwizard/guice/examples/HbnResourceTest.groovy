@@ -3,7 +3,7 @@ package ru.vyarus.dropwizard.guice.examples
 import org.glassfish.jersey.client.JerseyClientBuilder
 import org.glassfish.jersey.client.JerseyInvocation
 import ru.vyarus.dropwizard.guice.examples.model.Sample
-import ru.vyarus.dropwizard.guice.test.spock.UseDropwizardApp
+import ru.vyarus.dropwizard.guice.test.jupiter.TestDropwizardApp
 import spock.lang.Specification
 
 import javax.ws.rs.client.Client
@@ -13,7 +13,7 @@ import javax.ws.rs.core.GenericType
  * @author Vyacheslav Rusakov
  * @since 12.06.2016
  */
-@UseDropwizardApp(value = HbnApplication, config = 'src/test/resources/config.yml')
+@TestDropwizardApp(value = HbnApplication, config = 'src/test/resources/config.yml')
 class HbnResourceTest extends Specification {
 
     def "Check resource call"() {

@@ -1,13 +1,13 @@
 package ru.vyarus.dropwizard.guice.examples
 
-import ru.vyarus.dropwizard.guice.test.spock.UseDropwizardApp
+import ru.vyarus.dropwizard.guice.test.jupiter.TestDropwizardApp
 import spock.lang.Specification
 
 /**
  * @author Vyacheslav Rusakov
  * @since 07.03.2017
  */
-@UseDropwizardApp(EventBusApp)
+@TestDropwizardApp(EventBusApp)
 class AppTest extends Specification {
 
     def "Check event bus"() {

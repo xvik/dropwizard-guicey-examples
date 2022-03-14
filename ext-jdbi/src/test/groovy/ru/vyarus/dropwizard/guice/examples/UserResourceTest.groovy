@@ -2,7 +2,7 @@ package ru.vyarus.dropwizard.guice.examples
 
 import org.glassfish.jersey.client.JerseyClientBuilder
 import ru.vyarus.dropwizard.guice.examples.model.User
-import ru.vyarus.dropwizard.guice.test.spock.UseDropwizardApp
+import ru.vyarus.dropwizard.guice.test.jupiter.TestDropwizardApp
 
 import javax.ws.rs.client.Client
 import javax.ws.rs.client.Entity
@@ -12,7 +12,7 @@ import javax.ws.rs.core.GenericType
  * @author Vyacheslav Rusakov
  * @since 09.12.2016
  */
-@UseDropwizardApp(value = JdbiApplication, config = 'src/test/resources/test-config.yml')
+@TestDropwizardApp(value = JdbiApplication, config = 'src/test/resources/test-config.yml')
 class UserResourceTest extends AbstractTest {
 
 
@@ -34,7 +34,7 @@ class UserResourceTest extends AbstractTest {
         client.target("http://localhost:8080/users").request()
                 .buildPut(Entity.json(res)).invoke()
         List<User> list = client.target("http://localhost:8080/users").request()
-                .buildGet().invoke().readEntity(new GenericType<List<User>>(){})
+                .buildGet().invoke().readEntity(new GenericType<List<User>>() {})
         then: "modified"
         list.size() == 1
         with(list[0]) {

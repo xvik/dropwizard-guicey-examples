@@ -1,17 +1,16 @@
 package ru.vyarus.dropwizard.guice.examples
 
-import ru.vyarus.dropwizard.guice.test.spock.UseGuiceyApp
 import ru.vyarus.dropwizard.guice.examples.service.SampleService
+import ru.vyarus.dropwizard.guice.test.jupiter.TestGuiceyApp
 import spock.lang.Specification
 
 import javax.inject.Inject
-
 
 /**
  * @author Vyacheslav Rusakov
  * @since 27.01.2016
  */
-@UseGuiceyApp(ExtensionsDemoApplication)
+@TestGuiceyApp(ExtensionsDemoApplication)
 class GuiceyAppTest extends Specification {
 
     @Inject

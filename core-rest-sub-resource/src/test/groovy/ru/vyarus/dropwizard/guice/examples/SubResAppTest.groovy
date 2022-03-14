@@ -1,14 +1,13 @@
 package ru.vyarus.dropwizard.guice.examples
 
-import ru.vyarus.dropwizard.guice.test.spock.UseDropwizardApp
+import ru.vyarus.dropwizard.guice.test.jupiter.TestDropwizardApp
 import spock.lang.Specification
-
 
 /**
  * @author Vyacheslav Rusakov
  * @since 27.07.2017
  */
-@UseDropwizardApp(SubResourceApplication)
+@TestDropwizardApp(SubResourceApplication)
 class SubResAppTest extends Specification {
 
     def "Check guice sub resource"() {

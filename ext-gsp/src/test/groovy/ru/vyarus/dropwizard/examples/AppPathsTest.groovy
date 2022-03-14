@@ -1,7 +1,6 @@
 package ru.vyarus.dropwizard.examples
 
-import ru.vyarus.dropwizard.guice.test.spock.ConfigOverride
-import ru.vyarus.dropwizard.guice.test.spock.UseDropwizardApp
+import ru.vyarus.dropwizard.guice.test.jupiter.TestDropwizardApp
 import ru.vyarus.guice.examples.GspApplication
 import spock.lang.Specification
 
@@ -9,8 +8,7 @@ import spock.lang.Specification
  * @author Vyacheslav Rusakov
  * @since 23.10.2019
  */
-@UseDropwizardApp(value = GspApplication,
-        configOverride = @ConfigOverride(key = "server.rootPath", value = "/rest/*"))
+@TestDropwizardApp(value = GspApplication, restMapping = "/rest/*")
 class AppPathsTest extends Specification {
 
     def "Check application urls"() {

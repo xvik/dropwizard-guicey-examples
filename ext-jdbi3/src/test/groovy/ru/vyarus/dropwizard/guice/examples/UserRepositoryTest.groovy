@@ -2,7 +2,7 @@ package ru.vyarus.dropwizard.guice.examples
 
 import ru.vyarus.dropwizard.guice.examples.model.User
 import ru.vyarus.dropwizard.guice.examples.repository.UserRepository
-import ru.vyarus.dropwizard.guice.test.spock.UseGuiceyApp
+import ru.vyarus.dropwizard.guice.test.jupiter.TestGuiceyApp
 
 import javax.inject.Inject
 
@@ -10,7 +10,7 @@ import javax.inject.Inject
  * @author Vyacheslav Rusakov
  * @since 01.11.2018
  */
-@UseGuiceyApp(value = Jdbi3Application, config = 'src/test/resources/test-config.yml')
+@TestGuiceyApp(value = Jdbi3Application, config = 'src/test/resources/test-config.yml')
 class UserRepositoryTest extends AbstractTest {
 
     @Inject

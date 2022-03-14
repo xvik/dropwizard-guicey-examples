@@ -1,7 +1,7 @@
 package ru.vyarus.dropwizard.guice.examples
 
 import ru.vyarus.dropwizard.guice.examples.web.SampleRequestListener
-import ru.vyarus.dropwizard.guice.test.spock.UseDropwizardApp
+import ru.vyarus.dropwizard.guice.test.jupiter.TestDropwizardApp
 import spock.lang.Specification
 
 import javax.inject.Inject
@@ -10,7 +10,7 @@ import javax.inject.Inject
  * @author Vyacheslav Rusakov
  * @since 31.12.2019
  */
-@UseDropwizardApp(ServletsDemoApplication)
+@TestDropwizardApp(ServletsDemoApplication)
 class WebFeaturesTest extends Specification {
 
     @Inject
