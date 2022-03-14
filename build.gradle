@@ -3,7 +3,7 @@ plugins {
 }
 
 wrapper {
-    gradleVersion = '6.9'
+    gradleVersion = '7.4'
 }
 
 description = 'Dropwizard guicey examples'
@@ -35,9 +35,12 @@ subprojects {
         testImplementation 'org.spockframework:spock-core:2.0-groovy-3.0'
         testImplementation 'ru.vyarus:spock-junit5:1.0.0'
         testImplementation "io.dropwizard:dropwizard-testing"
+
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter'
     }
 
     test {
+        useJUnitPlatform()
         testLogging {
             events "skipped", "failed"
             exceptionFormat "full"
