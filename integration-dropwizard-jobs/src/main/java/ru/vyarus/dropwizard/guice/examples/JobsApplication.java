@@ -20,7 +20,7 @@ public class JobsApplication extends Application<JobsAppConfiguration> {
     @Override
     public void initialize(Bootstrap<JobsAppConfiguration> bootstrap) {
         bootstrap.addBundle(GuiceBundle.builder()
-                .enableAutoConfig(JobsApplication.class.getPackage().getName())
+                .enableAutoConfig()
                 .build());
 
         // force dropwizard-jobs using main metrics registry for all jobs

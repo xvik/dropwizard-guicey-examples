@@ -17,7 +17,7 @@ public class AuthApplication extends Application<Configuration> {
     @Override
     public void initialize(Bootstrap<Configuration> bootstrap) {
         bootstrap.addBundle(GuiceBundle.builder()
-                .enableAutoConfig("ru.vyarus.dropwizard.guice.examples")
+                .enableAutoConfig()
                 .build());
     }
 

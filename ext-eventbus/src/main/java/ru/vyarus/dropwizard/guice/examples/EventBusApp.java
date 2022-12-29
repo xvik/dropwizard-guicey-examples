@@ -20,7 +20,7 @@ public class EventBusApp extends Application<Configuration> {
     @Override
     public void initialize(Bootstrap<Configuration> bootstrap) {
         bootstrap.addBundle(GuiceBundle.builder()
-                .enableAutoConfig(getClass().getPackage().getName())
+                .enableAutoConfig()
                 .bundles(new EventBusBundle())
                 .build());
     }

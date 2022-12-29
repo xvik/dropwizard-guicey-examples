@@ -23,7 +23,7 @@ public class Jdbi3Application extends Application<Jdbi3AppConfiguration> {
     public void initialize(Bootstrap<Jdbi3AppConfiguration> bootstrap) {
 
         bootstrap.addBundle(GuiceBundle.builder()
-                .enableAutoConfig(Jdbi3Application.class.getPackage().getName())
+                .enableAutoConfig()
                 .bundles(JdbiBundle
                         .<Jdbi3AppConfiguration>forDatabase((conf, env) -> conf.getDatabase())
                         .withPlugins(new H2DatabasePlugin()))

@@ -22,7 +22,7 @@ public class JdbiApplication extends Application<JdbiAppConfiguration> {
     public void initialize(Bootstrap<JdbiAppConfiguration> bootstrap) {
 
         bootstrap.addBundle(GuiceBundle.builder()
-                .enableAutoConfig(JdbiApplication.class.getPackage().getName())
+                .enableAutoConfig()
                 .bundles(JdbiBundle.<JdbiAppConfiguration>forDatabase((conf, env) -> conf.getDatabase()))
                 .build());
         // used for manual run to init db

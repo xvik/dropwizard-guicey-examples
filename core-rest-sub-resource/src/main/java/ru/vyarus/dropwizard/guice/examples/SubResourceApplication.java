@@ -16,7 +16,7 @@ public class SubResourceApplication extends Application<Configuration> {
     @Override
     public void initialize(Bootstrap<Configuration> bootstrap) {
         bootstrap.addBundle(GuiceBundle.builder()
-                .enableAutoConfig(getClass().getPackage().getName())
+                .enableAutoConfig()
                 // bridge is required to inject guice service into hk managed sub resource
                 .option(GuiceyOptions.UseHkBridge, true)
                 // make sure service will not be created in both contexts (advanced validation for test)

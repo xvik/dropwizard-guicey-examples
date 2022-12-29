@@ -21,7 +21,7 @@ public class HbnApplication extends Application<HbnAppConfiguration> {
         // register hbn bundle before guice to make sure factory initialized before guice context start
         bootstrap.addBundle(hibernate);
         bootstrap.addBundle(GuiceBundle.builder()
-                .enableAutoConfig("ru.vyarus.dropwizard.guice.examples")
+                .enableAutoConfig()
                 .modules(new HbnModule(hibernate))
                 .build());
     }

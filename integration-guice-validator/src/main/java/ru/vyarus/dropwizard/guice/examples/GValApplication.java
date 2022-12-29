@@ -24,7 +24,7 @@ public class GValApplication extends Application<Configuration> {
     public void initialize(Bootstrap<Configuration> bootstrap) {
 
         bootstrap.addBundle(GuiceBundle.builder()
-                .enableAutoConfig(getClass().getPackage().getName())
+                .enableAutoConfig()
                 .modules(
                         // register validation module, but with exclusion for rest resources (which are guice beans)
                         // because dropwizard already applies validation support there

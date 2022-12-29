@@ -19,7 +19,7 @@ public class SampleApplication extends Application<Configuration> {
     @Override
     public void initialize(Bootstrap<Configuration> bootstrap) {
         bootstrap.addBundle(GuiceBundle.builder()
-                .enableAutoConfig(getClass().getPackage().getName())
+                .enableAutoConfig()
                 .modules(new SampleModule())
                 .build());
     }

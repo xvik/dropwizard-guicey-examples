@@ -20,7 +20,7 @@ public class GspApplication extends Application<Configuration> {
     @Override
     public void initialize(Bootstrap<Configuration> bootstrap) {
         bootstrap.addBundle(GuiceBundle.builder()
-                .enableAutoConfig(getClass().getPackage().getName())
+                .enableAutoConfig()
                 .bundles(
                         // global views support
                         ServerPagesBundle.builder().build(),

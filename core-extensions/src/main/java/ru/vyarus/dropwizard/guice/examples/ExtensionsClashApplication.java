@@ -20,7 +20,7 @@ public class ExtensionsClashApplication extends Application<Configuration> {
     public void initialize(Bootstrap<Configuration> bootstrap) {
         bootstrap.addBundle(GuiceBundle.builder()
                 // scan will find everything
-                .enableAutoConfig("ru.vyarus.dropwizard.guice.examples")
+                .enableAutoConfig()
                 // all three directly registered
                 .extensions(MyResource.class, MyResourceFromScan.class, MyResourceFromBinding.class)
                 // and all three set as bindings
