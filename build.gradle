@@ -9,7 +9,7 @@ wrapper {
 description = 'Dropwizard guicey examples'
 
 ext {
-    guiceyBom = '5.7.0-1'
+    guiceyBom = '5.7.1-1'
 }
 
 subprojects {
@@ -28,6 +28,8 @@ subprojects {
 
         constraints {
             implementation 'io.github.dropwizard-jobs:dropwizard-jobs-guice:4.0.0-RELEASE'
+            // flyway not compatible with h2 1.4.200 anymore
+            implementation 'com.h2database:h2:2.1.214'
         }
 
         implementation 'ru.vyarus:dropwizard-guicey'
