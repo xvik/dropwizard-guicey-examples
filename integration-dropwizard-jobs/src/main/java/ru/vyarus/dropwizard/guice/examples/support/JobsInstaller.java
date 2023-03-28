@@ -1,7 +1,7 @@
 package ru.vyarus.dropwizard.guice.examples.support;
 
 import io.dropwizard.jobs.Job;
-import io.dropwizard.setup.Environment;
+import io.dropwizard.core.setup.Environment;
 import ru.vyarus.dropwizard.guice.module.installer.FeatureInstaller;
 import ru.vyarus.dropwizard.guice.module.installer.install.TypeInstaller;
 import ru.vyarus.dropwizard.guice.module.installer.util.FeatureUtils;

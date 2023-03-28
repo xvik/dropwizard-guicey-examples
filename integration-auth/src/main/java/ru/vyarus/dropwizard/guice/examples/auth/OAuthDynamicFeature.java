@@ -3,7 +3,7 @@ package ru.vyarus.dropwizard.guice.examples.auth;
 import io.dropwizard.auth.AuthDynamicFeature;
 import io.dropwizard.auth.AuthValueFactoryProvider;
 import io.dropwizard.auth.oauth.OAuthCredentialAuthFilter;
-import io.dropwizard.setup.Environment;
+import io.dropwizard.core.setup.Environment;
 import org.glassfish.jersey.server.filter.RolesAllowedDynamicFeature;
 
 import javax.inject.Inject;

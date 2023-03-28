@@ -1,6 +1,6 @@
 package ru.vyarus.dropwizard.guice.examples;
 
-import io.dropwizard.Configuration;
+import io.dropwizard.core.Configuration;
 import ru.vyarus.dropwizard.guice.examples.modules.Some3rdPatyModule;
 import ru.vyarus.dropwizard.guice.module.support.DropwizardAwareModule;
 

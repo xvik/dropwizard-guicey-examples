@@ -7,7 +7,6 @@ include 'core-getting-started',
         'core-bundle-plug-n-play',
         'core-installers-reset',
         'core-installer-custom',
-        'ext-jdbi',
         'ext-jdbi3',
         'ext-eventbus',
         'ext-spa',
@@ -15,5 +14,5 @@ include 'core-getting-started',
         'ext-gsp-spa',
         'integration-auth',
         'integration-hibernate',
-        'integration-guice-validator',
-        'integration-dropwizard-jobs'
+        'integration-guice-validator'
+//        'integration-dropwizard-jobs'

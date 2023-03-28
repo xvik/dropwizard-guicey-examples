@@ -1,5 +1,0 @@
-dependencies {
-    implementation 'ru.vyarus.guicey:guicey-jdbi'
-    implementation 'com.h2database:h2'
-    implementation 'io.dropwizard.modules:dropwizard-flyway'
-}

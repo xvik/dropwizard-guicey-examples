@@ -1,6 +1,0 @@
-CREATE TABLE users (
-  id IDENTITY NOT NULL,
-  version INTEGER NOT NULL,
-  name VARCHAR,
-  CONSTRAINT users_id PRIMARY KEY (id)
-);

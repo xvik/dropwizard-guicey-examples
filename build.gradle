@@ -9,14 +9,14 @@ wrapper {
 description = 'Dropwizard guicey examples'
 
 ext {
-    guiceyBom = '5.7.1-1'
+    guiceyBom = '6.0.0-beta.1'
 }
 
 subprojects {
     apply plugin: 'groovy'
     apply plugin: 'project-report'
 
-    sourceCompatibility = 1.8
+    sourceCompatibility = 11
 
     configurations.all {
         resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
@@ -27,7 +27,10 @@ subprojects {
         implementation platform("ru.vyarus.guicey:guicey-bom:$guiceyBom")
 
         constraints {
-            implementation 'io.github.dropwizard-jobs:dropwizard-jobs-guice:4.0.0-RELEASE'
+            // todo INCOMPATIBLE
+//            implementation 'io.github.dropwizard-jobs:dropwizard-jobs-guice:4.0.0-RELEASE'
+
+            implementation 'org.flywaydb:flyway-core:9.16.1'
             // flyway not compatible with h2 1.4.200 anymore
             implementation 'com.h2database:h2:2.1.214'
         }

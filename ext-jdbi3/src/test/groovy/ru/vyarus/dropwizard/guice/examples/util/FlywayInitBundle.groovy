@@ -1,7 +1,6 @@
 package ru.vyarus.dropwizard.guice.examples.util
 
 import io.dropwizard.db.DataSourceFactory
-import io.dropwizard.flyway.FlywayFactory
 import io.dropwizard.lifecycle.Managed
 import org.flywaydb.core.Flyway
 import ru.vyarus.dropwizard.guice.examples.Jdbi3AppConfiguration
@@ -35,7 +34,9 @@ class FlywayInitBundle implements GuiceyBundle {
                 return
             }
             DataSourceFactory f = conf.getDatabase();
-            flyway = new FlywayFactory().build(f.getUrl(), f.getUser(), f.getPassword());
+            flyway = Flyway.configure().cleanDisabled(false)
+                    .dataSource(f.getUrl(), f.getUser(), f.getPassword())
+                    .load();
             flyway.migrate();
         }
 

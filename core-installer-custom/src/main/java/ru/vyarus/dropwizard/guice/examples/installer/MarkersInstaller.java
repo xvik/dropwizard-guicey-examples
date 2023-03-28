@@ -1,6 +1,6 @@
 package ru.vyarus.dropwizard.guice.examples.installer;
 
-import io.dropwizard.setup.Environment;
+import io.dropwizard.core.setup.Environment;
 import ru.vyarus.dropwizard.guice.debug.util.RenderUtils;
 import ru.vyarus.dropwizard.guice.examples.service.MarkersCollector;
 import ru.vyarus.dropwizard.guice.injector.lookup.InjectorLookup;
