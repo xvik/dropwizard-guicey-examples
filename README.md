@@ -4,15 +4,19 @@
 
 ### About
 
+**IMPORTANT** Examples were moved into the [core repository](https://github.com/xvik/dropwizard-guicey/tree/master/examples)
+(for guicey 6, dropwizard 3 and beyond)
+
 Usage examples for [dropwizard-guicey](https://github.com/xvik/dropwizard-guicey)
 (and [extensions](https://github.com/xvik/dropwizard-guicey-ext))
 
 If you can't find answer for your problem in provided examples, please request new sample by 
 [creating new issue](https://github.com/xvik/dropwizard-guicey-examples/issues).
 
-All samples build with guicey 5.7.1 (dropwizard 2.1.5). [Extensions project BOM](https://github.com/xvik/dropwizard-guicey-ext/tree/master/#BOM) 
+All samples build with guicey 6.0.0-beta.1 (dropwizard 3.0.0-beta.5). [Extensions project BOM](https://github.com/xvik/dropwizard-guicey-ext/tree/master/#BOM) 
 used for guicey, guice and dropwizard dependencies management.
 
+* [dropwizard 2.1 examples](https://github.com/xvik/dropwizard-guicey-examples/tree/dw-2.1)
 * [guicey 4.2.0 examples](https://github.com/xvik/dropwizard-guicey-examples/tree/4.2.0)
 * [guicey 4.1.0 examples](https://github.com/xvik/dropwizard-guicey-examples/tree/4.1.0)
 * [Dropwizard 0.9 examples](https://github.com/xvik/dropwizard-guicey-examples/tree/dw-0.9)
@@ -29,7 +33,6 @@ used for guicey, guice and dropwizard dependencies management.
 
 ### Guicey ext modules examples
 
-* [JDBI](ext-jdbi) - JDBI ext module example (deprecated) 
 * [JDBI3](ext-jdbi3) - JDBI3 ext module example
 * [EventBus](ext-eventbus) - guava eventbus ext module example
 * [SPA HTML5 routes](ext-spa) - SPA ext module example: HTML5 routes correct handling on server (for single page application)
